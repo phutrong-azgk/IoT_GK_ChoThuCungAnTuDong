@@ -6,9 +6,10 @@
     { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 9, "left": 0, "attrs": {} },
     { "type": "wokwi-lcd1602", "id": "lcd1", "top": -130, "left": 260, "attrs": { "pins": "i2c" } },
     { "type": "wokwi-ds1307", "id": "rtc1", "top": 75, "left": 290, "attrs": {} },
-    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 205, "left": 280, "attrs": { "distance": "8" } },
+    { "type": "wokwi-hc-sr04", "id": "ultrasonic1", "top": 205, "left": 280, "attrs": { "distance": "4" } },
     { "type": "wokwi-servo", "id": "servo1", "top": 280, "left": 50, "attrs": {} },
     { "type": "wokwi-pushbutton", "id": "button1", "top": 185, "left": -130, "attrs": { "color": "green", "label": "CHO AN" } },
+    { "type": "wokwi-pushbutton", "id": "refillButton", "top": 125, "left": -130, "attrs": { "color": "blue", "label": "NAP THUC AN" } },
     { "type": "wokwi-buzzer", "id": "buzzer1", "top": 270, "left": -120, "attrs": { "volume": "1" } }
   ],
   "connections": [
@@ -29,6 +30,8 @@
     [ "esp:18", "servo1:PWM", "orange", [ "v0" ] ],
     [ "esp:4", "button1:1.l", "blue", [ "v0" ] ],
     [ "esp:GND.1", "button1:2.l", "black", [ "v0" ] ],
+    [ "esp:15", "refillButton:1.l", "cyan", [ "v0" ] ],
+    [ "esp:GND.1", "refillButton:2.l", "black", [ "v0" ] ],
     [ "esp:23", "buzzer1:1", "purple", [ "v0" ] ],
     [ "esp:GND.1", "buzzer1:2", "black", [ "v0" ] ]
   ],

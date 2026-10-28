@@ -1,3 +1,4 @@
 LiquidCrystal I2C
 RTClib
 ESP32Servo
+PubSubClient
